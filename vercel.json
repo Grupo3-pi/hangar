@@ -1,0 +1,17 @@
+{
+    "builds": [
+      {
+        "src": "hangar252/wsgi.py",
+        "use": "@vercel/python"
+      }
+    ],
+    "routes": [
+      { "src": "/(.*)", "dest": "hangar252/wsgi.py" }
+    ],
+    "env": {
+      "DJANGO_SETTINGS_MODULE": "hangar252.settings",
+      "SECRET_KEY": "django-insecure-vw)_3*j_d^h9chf3ue#1=_#7vruh=l)c1)-0#m7p)0+c8)gje%",
+      "DEBUG": "false"
+    }
+  
+  }
