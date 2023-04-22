@@ -1,6 +1,7 @@
 from pathlib import Path
 import os
 
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -15,8 +16,8 @@ SECRET_KEY = 'django-insecure-vw)_3*j_d^h9chf3ue#1=_#7vruh=l)c1)-0#m7p)0+c8)gje%
 DEBUG = True
 
 #ALTERAR URL QUANDO FAZER DEPLOY NO VERCEL
-#ALLOWED_HOSTS = ['.vercel.app']
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.vercel.app']
+#ALLOWED_HOSTS = []
 
 # Application definition
 
@@ -64,13 +65,24 @@ WSGI_APPLICATION = 'hangar252.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+#DATABASES = {
+ #   'default': {
+ #       'ENGINE': 'django.db.backends.mysql',
+ #       'NAME': 'cardapio_db',
+ #       'USER': 'root',
+ #       'PASSWORD': '123456',
+#       'HOST': 'localhost',
+ #       'PORT': '3306',
+#    }
+#}
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'cardapio_db',
-        'USER': 'root',
-        'PASSWORD': '123456',
-        'HOST': 'localhost',
+        'USER': 'grupo3_ti_pi',
+        'PASSWORD': 'Univesp_pi-g3',
+        'HOST': 'cardapio-db.cicotqjevhcp.us-east-1.rds.amazonaws.com',
         'PORT': '3306',
     }
 }
