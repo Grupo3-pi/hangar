@@ -16,4 +16,5 @@ os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'hangar252.settings')
 application = get_wsgi_application()
 
 #ALTERAR QUANDO FAZER DEPLOY NO VERCEL
-#app = get_wsgi_application()
+
+app = get_wsgi_application()
