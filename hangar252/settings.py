@@ -1,5 +1,6 @@
 from pathlib import Path
 import os
+import dj_database_url
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -76,17 +77,18 @@ WSGI_APPLICATION = 'hangar252.wsgi.application'
 #    }
 #}
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'cardapio_db',
-        'USER': 'grupo3_ti_pi',
-        'PASSWORD': 'Univesp_pi-g3',
-        'HOST': 'cardapio-db.cicotqjevhcp.us-east-1.rds.amazonaws.com',
-        'PORT': '3306',
-    }
-}
+#DATABASES = {
+ #   'default': {
+  #      'ENGINE': 'django.db.backends.mysql',
+   #     'NAME': 'cardapio_db',
+ #       'USER': 'grupo3_ti_pi',
+  #      'PASSWORD': 'Univesp_pi-g3',
+   #     'HOST': 'cardapio-db.cicotqjevhcp.us-east-1.rds.amazonaws.com',
+   #     'PORT': '3306',
+    #}
+#}
 
+DATABASES = {'default': dj_database_url.config()}
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
